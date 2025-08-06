@@ -1,0 +1,25 @@
+export const ERROR_CODES = {
+  SUCCESS: 0,
+  INVALID_MARKET_TYPE: 1001,
+  MISSING_REQUIRED_PARAMS: 1002,
+  INVALID_SIDE: 1003,
+  INVALID_ORDER_TYPE: 1004,
+  PRICE_REQUIRED_FOR_LIMIT: 1005,
+  LIMIT_EXCEEDED: 1006,
+  SYMBOL_REQUIRED: 1007,
+  BINANCE_API_ERROR: 2001,
+  INTERNAL_SERVER_ERROR: 5000,
+} as const;
+
+export const ERROR_MESSAGES = {
+  [ERROR_CODES.SUCCESS]: 'OK',
+  [ERROR_CODES.INVALID_MARKET_TYPE]: 'Market type must be either "spot" or "futures"',
+  [ERROR_CODES.MISSING_REQUIRED_PARAMS]: 'Missing required parameters',
+  [ERROR_CODES.INVALID_SIDE]: 'Side must be either BUY or SELL',
+  [ERROR_CODES.INVALID_ORDER_TYPE]: 'Type must be either LIMIT or MARKET',
+  [ERROR_CODES.PRICE_REQUIRED_FOR_LIMIT]: 'Price is required for LIMIT orders',
+  [ERROR_CODES.LIMIT_EXCEEDED]: 'Limit cannot exceed 1000',
+  [ERROR_CODES.SYMBOL_REQUIRED]: 'Symbol parameter is required',
+  [ERROR_CODES.BINANCE_API_ERROR]: 'Binance API Error',
+  [ERROR_CODES.INTERNAL_SERVER_ERROR]: 'Internal Server Error',
+} as const;
